@@ -1,6 +1,6 @@
 # PiFiBantay Mobile
 
-**PiFiBantay Mobile** is a real-time mobile IDS/IPS (Intrusion Detection and Prevention System) monitoring and management application developed using Flutter. It provides administrators with the ability to monitor alerts, block suspicious IPs, view security logs, and configure system settings — all from their mobile device.
+**PiFiBantay Mobile** is a real-time mobile IDS/IPS (Intrusion Detection and Prevention System) monitoring and management application developed using Flutter. It provides administrators with the ability to monitor alerts, block suspicious IPs, view security logs, and configure system settings, all from their mobile device.
 
 ---
 
