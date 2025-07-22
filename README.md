@@ -68,32 +68,33 @@ This project is for educational use and protected under standard open-source lic
 
 ---
 
-##  Key Features
+### Security & Detection
+- **Real-time Threat Monitoring** - Detects and displays incoming alerts as they occur.
+- **Blocked IP Management** - Allows administrators to review and unblock flagged IP addresses.
+- **Log Viewer** - Keeps a detailed record of events, intrusions, and admin actions.
+- **Alert Center** - Displays categorized threat notifications and summaries.
+- **Notification Toggle** - Enables/disables real-time security alerts.
 
-###  Security & Detection
-- **Real-time WiFi Scanning** - Comprehensive network discovery and analysis
-- **Evil Twin Detection** - Advanced algorithms using signal pattern analysis and MAC verification
-- **Threat Scoring System** - Dynamic risk assessment (0–100 scale) for detected networks
-- **Security Alerts** - Instant notifications for potential threats
-- **Government Whitelist Integration** - Verification against approved network databases
+### Admin & Control
+- **Dashboard Overview** - A centralized page to view statistics and security status.
+- **Profile Drawer** - Quick admin info and navigation accessible via drawer.
+- **Connection Control** - Manually toggle system connectivity state.
 
-###  User Experience
-- **Interactive Dashboard** - Visual network maps and security status
-- **Educational Content** - Cybersecurity learning modules and quizzes
-- **Offline Mode** - Full functionality without internet connection
-- **Material Design 3** - Modern, accessible user interface
-- **Multi-language Support** - English and Filipino/Tagalog (planned)
+### Technical Features
+- **Flutter Framework** - Built entirely using Flutter and Dart for cross-platform support.
+- **Clean Architecture** - Separated screens, widgets, and models for maintainability.
+- **Custom Widgets** - Reusable components such as `alert_card`, `log_entry_tile`, and `chip_status`.
+- **Offline-ready Design** - Data stored locally in JSON format for offline simulation.
+- **Responsive UI** - Works across screen sizes with Material Design principles.
 
-###  Technical Features
-- **Clean Architecture** - Scalable and maintainable codebase
-- **Firebase Integration** - Cloud services for data sync and analytics
-- **Cross-platform Support** - Android (primary) with iOS roadmap
-- **Performance Optimized** - 60fps UI with efficient memory usage
+---
 
-##  Requirements
-- Flutter SDK >=3.0.0
+## Requirements
+
+- Flutter SDK >= 3.0.0
+- Dart >= 3.0.0
 - Android 6.0+ (API Level 23+)
-- Dart >=3.0.0
+- Visual Studio Code or Android Studio
 
 ---
 
