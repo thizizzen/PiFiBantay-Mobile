@@ -17,7 +17,7 @@
 
 ---
 
-## 🛠 Project Structure
+##  Project Structure
 
 ```bash
 lib/
@@ -32,7 +32,7 @@ assets/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - [Flutter SDK](https://docs.flutter.dev/get-started/install)
@@ -49,62 +49,62 @@ flutter run
 
 ---
 
-## 👥 Contributors
+##  Contributors
 - **Zhenrel L. Ocampo** – Lead Developer & Programmer
 - **Peter Amador P. Bon** – Documentation Support
 - **Marc Daniel D. Glaban** – Documentation Support
 
 ---
 
-## 📄 License
+##  License
 This project is for educational use and protected under standard open-source licenses unless otherwise stated.
 
 ---
 
-## 📌 Notes
+##  Notes
 - The current mobile application is a simulation of how the system works when integrated with the Raspberry Pi device.
 - Make sure to connect the app to a real-time IDS/IPS backend to get live alerts and logs.
 - Developed by IT students of Batangas State University for academic purposes.
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-### 🔐 Security & Detection
+###  Security & Detection
 - **Real-time WiFi Scanning** - Comprehensive network discovery and analysis
 - **Evil Twin Detection** - Advanced algorithms using signal pattern analysis and MAC verification
 - **Threat Scoring System** - Dynamic risk assessment (0–100 scale) for detected networks
 - **Security Alerts** - Instant notifications for potential threats
 - **Government Whitelist Integration** - Verification against approved network databases
 
-### 🧑‍💻 User Experience
+###  User Experience
 - **Interactive Dashboard** - Visual network maps and security status
 - **Educational Content** - Cybersecurity learning modules and quizzes
 - **Offline Mode** - Full functionality without internet connection
 - **Material Design 3** - Modern, accessible user interface
 - **Multi-language Support** - English and Filipino/Tagalog (planned)
 
-### ⚙️ Technical Features
+###  Technical Features
 - **Clean Architecture** - Scalable and maintainable codebase
 - **Firebase Integration** - Cloud services for data sync and analytics
 - **Cross-platform Support** - Android (primary) with iOS roadmap
 - **Performance Optimized** - 60fps UI with efficient memory usage
 
-### 📋 Requirements
+##  Requirements
 - Flutter SDK >=3.0.0
 - Android 6.0+ (API Level 23+)
 - Dart >=3.0.0
 
 ---
 
-## ✅ USER ACCEPTANCE TESTING (UAT)
+## USER ACCEPTANCE TESTING (UAT)
 
 This part outlines the User Acceptance Testing (UAT) conducted to verify that the
 **PiFiBantay Mobile** meets the functional requirements and expectations of its intended
 users. UAT ensures the application is ready for real-world usage by validating each key
 feature based on test scenarios.
 
-### 🧪 UAT Environment
+### UAT Environment
 
 | Item              | Description                  |
 |-------------------|------------------------------|
@@ -115,7 +115,7 @@ feature based on test scenarios.
 | Framework         | Flutter SDK 3.x              |
 | Testing Tool      | Manual User Testing          |
 
-### 📄 Test Cases
+### Test Cases
 
 | Test Case ID | Test Scenario               | Test Description                                                                 | Expected Result                                     | Actual Result       | Status            |
 |--------------|-----------------------------|----------------------------------------------------------------------------------|------------------------------------------------------|----------------------|--------------------|
