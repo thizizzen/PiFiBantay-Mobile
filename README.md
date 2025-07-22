@@ -16,44 +16,6 @@
 | **Drawer Navigation** | Access all modules and user info through an intuitive side drawer.   |
 
 ---
-
-##  Project Structure
-
-```bash
-lib/
-├── main.dart               # App entry point and state management
-├── models/                 # Data models (alert_model.dart, ip_model.dart, log_model.dart)
-├── screens/                # UI screens (dashboard, alerts, logs, settings, login)
-├── widgets/                # Reusable UI components (cards, forms, drawers)
-assets/
-├── images/                 # App logo and profile image
-├── data/                   # Static JSON files (alerts.json, logs.json, blocked_ips.json)
-```
-
----
-
-##  Getting Started
-
-### Prerequisites
-- [Flutter SDK](https://docs.flutter.dev/get-started/install)
-- A connected device or emulator
-- (Optional) Raspberry Pi device for production IDS/IPS backend
-
-### Setup Steps
-```bash
-git clone https://github.com/thizizzen/PiFiBantay-Mobile.git
-cd PiFiBantay-Mobile
-flutter pub get
-flutter run
-```
----
-
-##  Notes
-- The current mobile application is a simulation of how the system works when integrated with the Raspberry Pi device.
-- Make sure to connect the app to a real-time IDS/IPS backend to get live alerts and logs.
-- Developed by IT students of Batangas State University for academic purposes.
-
----
 ##  Key Features
 
 ### Security & Detection
@@ -77,12 +39,48 @@ flutter run
 
 ---
 
+##  Project Structure
+
+```bash
+lib/
+├── main.dart               # App entry point and state management
+├── models/                 # Data models (alert_model.dart, ip_model.dart, log_model.dart)
+├── screens/                # UI screens (dashboard, alerts, logs, settings, login)
+├── widgets/                # Reusable UI components (cards, forms, drawers)
+assets/
+├── images/                 # App logo and profile image
+├── data/                   # Static JSON files (alerts.json, logs.json, blocked_ips.json)
+```
+
+---
+
 ## Requirements
 
 - Flutter SDK >= 3.0.0
 - Dart >= 3.0.0
 - Android 6.0+ (API Level 23+)
 - Visual Studio Code or Android Studio
+
+##  Getting Started
+
+### Prerequisites
+- [Flutter SDK](https://docs.flutter.dev/get-started/install)
+- A connected device or emulator
+- (Optional) Raspberry Pi device for production IDS/IPS backend
+
+### Setup Steps
+```bash
+git clone https://github.com/thizizzen/PiFiBantay-Mobile.git
+cd PiFiBantay-Mobile
+flutter pub get
+flutter run
+```
+---
+
+##  Notes
+- The current mobile application is a simulation of how the system works when integrated with the Raspberry Pi device.
+- Make sure to connect the app to a real-time IDS/IPS backend to get live alerts and logs.
+- Developed by IT students of Batangas State University for academic purposes.
 
 ---
 
