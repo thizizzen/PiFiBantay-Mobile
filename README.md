@@ -67,6 +67,7 @@ This project is for educational use and protected under standard open-source lic
 - Developed by IT students of Batangas State University for academic purposes.
 
 ---
+##  Key Features
 
 ### Security & Detection
 - **Real-time Threat Monitoring** - Detects and displays incoming alerts as they occur.
