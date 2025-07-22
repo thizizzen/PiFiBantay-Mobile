@@ -46,19 +46,6 @@ cd PiFiBantay-Mobile
 flutter pub get
 flutter run
 ```
-
----
-
-##  Contributors
-- **Zhenrel L. Ocampo** – Lead Developer, Programmer & UI/UX Designer
-- **Peter Amador P. Bon** – System Tester & Documentation Support
-- **Marc Daniel D. Glaban** – System Tester & Documentation Support
-
----
-
-##  License
-This project is for educational use and protected under standard open-source licenses unless otherwise stated.
-
 ---
 
 ##  Notes
@@ -99,11 +86,14 @@ This project is for educational use and protected under standard open-source lic
 
 ---
 
-## USER ACCEPTANCE TESTING (UAT)
+##  Contributors
+- **Zhenrel L. Ocampo** – Lead Developer, Programmer & UI/UX Designer
+- **Peter Amador P. Bon** – System Tester & Documentation Support
+- **Marc Daniel D. Glaban** – System Tester & Documentation Support
 
-This part outlines the User Acceptance Testing (UAT) conducted to verify that the
-**PiFiBantay Mobile** meets the functional requirements and expectations of its intended
-users. UAT ensures the application is ready for real-world usage by validating each key
-feature based on test scenarios.
+---
+
+##  License
+This project is for educational use and protected under standard open-source licenses unless otherwise stated.
 
 ---
