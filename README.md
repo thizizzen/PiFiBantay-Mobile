@@ -50,9 +50,9 @@ flutter run
 ---
 
 ##  Contributors
-- **Zhenrel L. Ocampo** – Lead Developer & Programmer
-- **Peter Amador P. Bon** – Documentation Support
-- **Marc Daniel D. Glaban** – Documentation Support
+- **Zhenrel L. Ocampo** – Lead Developer, Programmer & UI/UX Designer
+- **Peter Amador P. Bon** – System Tester & Documentation Support
+- **Marc Daniel D. Glaban** – System Tester & Documentation Support
 
 ---
 
@@ -105,26 +105,5 @@ This part outlines the User Acceptance Testing (UAT) conducted to verify that th
 **PiFiBantay Mobile** meets the functional requirements and expectations of its intended
 users. UAT ensures the application is ready for real-world usage by validating each key
 feature based on test scenarios.
-
-### UAT Environment
-
-| Item              | Description                  |
-|-------------------|------------------------------|
-| Device            | Android Phone / Emulator     |
-| OS Version        | Android 12+                  |
-| App Version       | 1.0.0                        |
-| Development Tool  | Flutter                      |
-| Framework         | Flutter SDK 3.x              |
-| Testing Tool      | Manual User Testing          |
-
-### Test Cases
-
-| Test Case ID | Test Scenario               | Test Description                                                                 | Expected Result                                     | Actual Result       | Status            |
-|--------------|-----------------------------|----------------------------------------------------------------------------------|------------------------------------------------------|----------------------|--------------------|
-| UAT-01       | View About Section          | Verify the expand/collapse behavior of the About section using "Show more/less" | Text expands and collapses properly                 | Works as expected   | Passed             |
-| UAT-02       | Navigate via Drawer Menu    | Validate drawer navigation between About, Research, and Experience sections     | Correct screen is displayed for each option         | Works as expected   | Passed             |
-| UAT-03       | Search Research Projects    | Ensure keyword search filters the research items                                | Matching research items are displayed               | Works as expected   | Passed             |
-| UAT-04       | Expand Experience Items     | Check if tapping an experience entry expands to show more information           | Description details become visible                  | Works as expected   | Passed             |
-| UAT-05       | Responsive Layout and Theming | Observe layout adaptability on screen resize or rotation                        | Layout adapts correctly without overflow            | Works as expected | Passed |
 
 ---
