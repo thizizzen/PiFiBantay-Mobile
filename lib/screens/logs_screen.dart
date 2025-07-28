@@ -1,9 +1,12 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:path/path.dart' as path;
 import 'package:pdf/widgets.dart' as pw;
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:path_provider/path_provider.dart';
+import 'package:open_file/open_file.dart';
 import '../models/log_model.dart';
 import '../widgets/log_manager.dart';
 import '../widgets/log_entry_tile.dart';
@@ -156,9 +159,30 @@ class _LogsScreenState extends State<LogsScreen> {
     });
   }
 
+  Future<bool> requestStoragePermission() async {
+    var status = await Permission.storage.status;
+
+    if (status.isDenied || status.isRestricted || status.isPermanentlyDenied) {
+      status = await Permission.storage.request();
+    }
+
+    return status.isGranted;
+  }
+
   Future<void> downloadPDFLogs() async {
     setState(() => _isDownloading = true);
-    await Future.delayed(const Duration(seconds: 1));
+    await Future.delayed(const Duration(milliseconds: 800));
+
+    final permission = await Permission.manageExternalStorage.status;
+    final granted =
+        permission.isGranted ||
+        await Permission.manageExternalStorage.request().isGranted;
+
+    if (!granted) {
+      showSnack("Storage permission denied.");
+      setState(() => _isDownloading = false);
+      return;
+    }
 
     final pdf = pw.Document();
     final logoBytes = await rootBundle.load('assets/images/logo.png');
@@ -202,12 +226,50 @@ class _LogsScreenState extends State<LogsScreen> {
       ),
     );
 
-    final dir = await getApplicationDocumentsDirectory();
-    final file = File("${dir.path}/pifibantay_logs.pdf");
-    await file.writeAsBytes(await pdf.save());
+    try {
+      final dir = await getExternalStorageDirectory();
+      final safeDir = dir ?? await getApplicationDocumentsDirectory();
+      final filePath = path.join(safeDir.path, 'pifibantay_logs.pdf');
 
-    if (context.mounted) {
-      showSnack(" Logs downloaded to ${file.path}");
+      final file = File(filePath);
+      await file.writeAsBytes(await pdf.save());
+
+      await OpenFile.open(filePath);
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          backgroundColor: const Color(0xFF1C2C3A),
+          content: Text(
+            'Logs saved to: $filePath',
+            style: const TextStyle(color: Colors.white),
+          ),
+          behavior: SnackBarBehavior.floating,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          margin: const EdgeInsets.all(16),
+          action: SnackBarAction(
+            label: 'Open',
+            textColor: Colors.amber,
+            onPressed: () {},
+          ),
+        ),
+      );
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          backgroundColor: Colors.red.shade400,
+          content: Text(
+            'Failed to save PDF: $e',
+            style: const TextStyle(color: Colors.white),
+          ),
+          behavior: SnackBarBehavior.floating,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          margin: const EdgeInsets.all(16),
+        ),
+      );
     }
 
     setState(() => _isDownloading = false);
